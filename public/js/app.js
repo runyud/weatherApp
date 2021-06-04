@@ -21,7 +21,16 @@ weatherForm.addEventListener('submit', (e) => {
                 locationMsg.textContent = data.error
             } else {
                 locationMsg.textContent = data.location
-                forecast.textContent = data.forecast
+                var weather_info = data.forecast.weather_descriptions +
+                  ". It is currently " +
+                  data.forecast.temperature +
+                  " degrees but it feels like " +
+                  data.forecast.feelslike +
+                  " degrees. \n Current humidity is " +
+                  data.forecast.humidity + "\n"
+                forecast.textContent = weather_info
+                console.log(data.forecast.weather_icon)
+                document.querySelector('#weather_icon').src = data.forecast.weather_icon
             }
         })
     })
