@@ -23,6 +23,7 @@ const forecast = (longitude, latitude, callback) => {
             humidity: body.current.humidity,
             precip: body.current.precip,
             wind_speed: body.current.wind_speed,
+            local_time: body.current.observation_time,
             weather_icon: body.current.weather_icons[0]
         }
       );

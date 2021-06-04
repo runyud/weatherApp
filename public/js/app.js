@@ -22,9 +22,10 @@ weatherForm.addEventListener('submit', (e) => {
             } else {
                 locationMsg.textContent = data.location
                 var weather_info = data.forecast.weather_descriptions +
-                  ". It is currently " +
+                  ".\n Local time is " + data.forecast.local_time +
+                  ".\n It is currently " +
                   data.forecast.temperature +
-                  " degrees but it feels like " +
+                  " degrees and it feels like " +
                   data.forecast.feelslike +
                   " degrees. \n Current humidity is " +
                   data.forecast.humidity + "%. \n Current wind speed is " +
