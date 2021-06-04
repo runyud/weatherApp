@@ -27,7 +27,9 @@ weatherForm.addEventListener('submit', (e) => {
                   " degrees but it feels like " +
                   data.forecast.feelslike +
                   " degrees. \n Current humidity is " +
-                  data.forecast.humidity + "\n"
+                  data.forecast.humidity + "%. \n Current wind speed is " +
+                  data.forecast.wind_speed + " mph and the chance of precipitation is "
+                  + data.forecast.precip + "%"
                 forecast.textContent = weather_info
                 console.log(data.forecast.weather_icon)
                 document.querySelector('#weather_icon').src = data.forecast.weather_icon

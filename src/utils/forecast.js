@@ -16,19 +16,13 @@ const forecast = (longitude, latitude, callback) => {
     } else {
       callback(
         undefined,
-        // body.current.weather_descriptions[0] +
-        //   ". It is currently " +
-        //   body.current.temperature +
-        //   " degrees but it feels like " +
-        //   body.current.feelslike +
-        //   " degrees. \n Current humidity is " +
-        //   body.current.humidity + "\n" + 
-        //   body.current.weather_icons[0]
         {
             weather_descriptions: body.current.weather_descriptions[0],
             temperature: body.current.temperature,
             feelslike: body.current.feelslike,
             humidity: body.current.humidity,
+            precip: body.current.precip,
+            wind_speed: body.current.wind_speed,
             weather_icon: body.current.weather_icons[0]
         }
       );
